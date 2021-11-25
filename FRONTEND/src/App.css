@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scrollbar-color: #222 #111;
+}
+
+nav {
+  /* background-color: #2c3044; */
+  background: black;
+  color: white;
+  /* box-shadow: 0 2px 5px #1e202e; */
+  box-shadow: 0 2px 2px #8cff00;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-title {
+  margin-left: 10%;
+}
+
+.search-box-container {
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.search-box {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+body {
+  /* background-color: #3c415c; */
+  margin-top: 60px;
+  background-color: #111;
+  color: white;
+  min-width: 250px;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+  /* margin-top: 60px; */
+}
+
+.movie {
+  margin: 10px;
+  max-width: 245px;
+}
+
+.movie_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie_cover_img {
+  border: 5px solid white;
+  border-radius: 5px;
+  position: relative;
+}
+
+.movie_cover_img:hover {
+  opacity: 0.5;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+/* .hide:hover {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* .hide:hover + .movie_cover_img {
+  opacity: 0.5;
+} */
+
+/* .movie_cover_img:hover + .hide {
+  display: block;
+  position: absolute;
+} */
+
+/* @media screen and (max-width: 500px) {
+  .movie_cover_img {
+    width: 100px;
+  }
+  .movie_title {
+    font-size: 16px;
+  }
+} */
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 10vw;
+}
+
+.genre-div {
+  /* border: 1px solid white; */
+  display: inline-flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  color: #444;
+  font-weight: bold;
+  max-width: 90vh;
+  margin-bottom: 10px;
+}
+
+.dropdown {
+  margin-top: 10px;
+  background-color: #222;
+  outline: none;
+  color: #555;
+  cursor: pointer;
+  padding: 10px;
+  /* border: 1px solid white; */
+  border: none;
+  border-radius: 5px;
+}
+
+/* .dropdown:hover {
+  background-color: #222;
+} */
+
+.dropdown-item:hover {
+  background-color: white;
+}
+
+.sortby-container {
+  text-align: center;
+}
+
+.sortby-label-selected {
+  color: #62af04;
+}
+
+.movie-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+  z-index: 200;
+  transition: 0.2s;
+  overflow-y: scroll;
+}
+
+.movie-modal-show {
+  left: 0;
+  transition: 0.2s;
+}
+
+.movie-modal-hide {
+  left: -100%;
+  transition: 0.2s;
+}
+
+.icon-modal-close {
+  width: 40px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color: #333;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.icon-modal-close:hover {
+  background-color: #111;
+}
+
+.btn-download {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  border: 1px solid #222;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-download:hover {
+  background-color: #111;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.search-results {
+  position: absolute;
+  padding: 10px;
+  text-align: center;
+  background-color: #8cff00;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search-result:hover {
+  cursor: pointer;
+  background-color: #5ca700;
+}
+
+.btn-search {
+  height: 40px;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  background-color: #8cff00;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: white;
+  text-shadow: 1px 1px #73d002;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-search:hover {
+  background-color: #74d300;
+  text-shadow: 1px 1px black;
+}
